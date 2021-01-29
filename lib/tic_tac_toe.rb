@@ -24,7 +24,7 @@ class TicTacToe
   end
 
   def input_to_index(user_input)
-    new_user_input = user_input.to_i 
+    new_user_input = user_input.to_i
     new_user_input -= 1
     return new_user_input
   end
@@ -78,7 +78,7 @@ class TicTacToe
     turns = turn_count
     if turns % 2 == 0
       return "X"
-    else 
+    else
       return "O"
     end
   end
@@ -88,11 +88,11 @@ class TicTacToe
       index_0 = win_combo[0]
       index_1 = win_combo[1]
       index_2 = win_combo[2]
-  
+
       position_1 = @board[index_0]
       position_2 = @board[index_1]
       position_3 = @board[index_2]
-  
+
       if position_1 == "X" && position_2 == "X" && position_3 == "X"
         return win_combo
       elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
@@ -127,10 +127,10 @@ def winner
   index = won?
   if index == false
     return nil
-  else 
+  else
     if board[index[0]] == "X"
       return "X"
-    else 
+    else
       return "O"
     end
   end
